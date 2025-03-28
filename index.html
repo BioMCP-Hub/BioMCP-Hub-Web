@@ -1,105 +1,127 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="biomcp-hub - 生命科学领域的智能数据平台">
-    <title>biomcp-hub - 生命科学数据平台</title>
+    <title>BioMCP-Hub | 生命科学智能协作平台</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
+        .science-gradient {
+            background: linear-gradient(135deg, #1a237e 0%, #004d40 50%, #00695c 100%);
         }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        .container {
-            padding: 20px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            font-size: 1.8rem;
-            color: #34495e;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-        }
-        p {
-            font-size: 1rem;
-            color: #555;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .cta-btn {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .cta-btn:hover {
-            background-color: #2980b9;
+        .dna-pattern {
+            background-image: url('data:image/svg+xml;utf8,<svg...>'); /* 自定义DNA链背景矢量图 */
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>biomcp-hub: 生命科学数据平台</h1>
-        <p>智能化文献挖掘与数据分析平台，助力科研创新与药物发现</p>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="/logo.svg" class="h-8 w-8" alt="BioMCP">
+                    <span class="ml-2 text-xl font-bold text-gray-800">BioMCP-Hub</span>
+                </div>
+                <a href="#beta" class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
+                    申请内测
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首屏展示 -->
+    <header class="science-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                让生命科学研究进入智能协作时代
+            </h1>
+            <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                聚合200+生物数据库、50+分析工具与AI模型，通过智能体自动编排研究流程，效率提升10倍
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#demo" class="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-shadow">
+                    观看演示
+                </a>
+                <a href="#docs" class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors">
+                    开发文档
+                </a>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <section class="section">
-            <h2>平台简介</h2>
-            <p>**biomcp-hub** 是一个专为生命科学领域设计的智能化数据平台，提供自动化文献挖掘、知识发现、实验设计与模拟分析等功能。平台结合最新的机器学习技术与大数据分析，帮助研究人员快速获取生命科学领域的前沿信息，优化研究流程，促进科学创新。</p>
-        </section>
+    <!-- 核心价值模块 -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div class="p-6 border rounded-xl hover:shadow-lg transition-shadow">
+                <div class="text-emerald-600 text-4xl mb-4">🧬</div>
+                <h3 class="text-xl font-bold mb-3">一站式科研工作流</h3>
+                <p class="text-gray-600">
+                    文献检索 → 数据清洗 → 模型预测 → 可视化分析，全流程无缝衔接
+                </p>
+            </div>
+            <div class="p-6 border rounded-xl hover:shadow-lg transition-shadow">
+                <div class="text-emerald-600 text-4xl mb-4">🤖</div>
+                <h3 class="text-xl font-bold mb-3">智能体自动编排</h3>
+                <p class="text-gray-600">
+                    自然语言描述需求，AI自动调用工具链并生成可复现报告
+                </p>
+            </div>
+            <div class="p-6 border rounded-xl hover:shadow-lg transition-shadow">
+                <div class="text-emerald-600 text-4xl mb-4">🌐</div>
+                <h3 class="text-xl font-bold mb-3">开放科研生态</h3>
+                <p class="text-gray-600">
+                    开源协议集成第三方工具，共享500+社区贡献的分析模块
+                </p>
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>核心功能</h2>
-            <ul>
-                <li><strong>文献挖掘与自动摘要生成：</strong> 利用大语言模型（LLM）自动提取文献中的关键信息，生成简明的文献摘要。</li>
-                <li><strong>数据存储与整合：</strong> 提供多种数据格式支持，整合基因、蛋白质、药物等领域数据，支持高效查询与分析。</li>
-                <li><strong>知识图谱构建与查询：</strong> 构建多维度的生命科学知识图谱，支持基因、蛋白质、药物等的复杂关系推理。</li>
-                <li><strong>数据分析与预测：</strong> 提供自动化的数据分析工具，支持蛋白质结构预测、基因表达分析等功能。</li>
-                <li><strong>药物发现与再利用：</strong> 利用知识图谱和机器学习技术，推动药物发现与再利用。</li>
-            </ul>
-        </section>
+    <!-- 应用场景示例 -->
+    <section class="py-16 bg-gray-50 dna-pattern">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">典型科研场景</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-emerald-100 p-3 rounded-full mr-4">🔬</div>
+                        <h3 class="text-xl font-semibold">单细胞测序分析</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        输入原始fastq文件 → 自动质控 → 选择分析流程(Seurat/Scanpy) → 交互式可视化 → 导出发表级图表
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded-md text-sm font-mono">
+                        $ biomcp run --input *.fastq --pipeline scrna
+                    </div>
+                </div>
+                <!-- 其他场景卡片... -->
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>技术架构</h2>
-            <p>**biomcp-hub** 基于现代化的技术架构，采用云平台部署，支持模块化扩展，确保高可用性和易用性。平台结合图数据库（如 **Neo4j**）与机器学习模型（如 **PyTorch**、**TensorFlow**）来处理和分析生命科学数据。</p>
-        </section>
+    <!-- 技术信任背书 -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">合作与认证</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-70">
+                <img src="elixir-logo.svg" class="h-12 mx-auto" alt="ELIXIR">
+                <img src="embl-ebi-logo.svg" class="h-12 mx-auto" alt="EMBL-EBI">
+                <img src="iso27001.svg" class="h-12 mx-auto" alt="ISO27001">
+                <img src="ga4gh-logo.svg" class="h-12 mx-auto" alt="GA4GH">
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>加入我们</h2>
-            <p>我们诚邀更多生命科学领域的研究人员、开发者和合作伙伴加入 **biomcp-hub**。共同推动生命科学领域的数据自动化与智能化发展。</p>
-            <a href="mailto:contact@biomcp-hub.org" class="cta-btn">联系我们</a>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 biomcp-hub. All Rights Reserved.</p>
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-4">遵循FAIR原则构建开放科研基础设施</p>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#docs" class="hover:text-white transition-colors">开发者文档</a>
+                <a href="#pricing" class="hover:text-white transition-colors">服务定价</a>
+                <a href="#contact" class="hover:text-white transition-colors">实验室合作</a>
+            </div>
+            <p class="text-sm text-gray-500">© 2024 BioMCP-Hub. 遵循AGPL-3.0开源协议</p>
+        </div>
     </footer>
 </body>
 </html>
