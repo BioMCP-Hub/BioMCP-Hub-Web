@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        const lang = navigator.language || navigator.userLanguage;
+        const preferredLang = lang.startsWith('zh') ? '' : '/en';
+        
+        // 保留原始路径参数
+        const path = window.location.pathname.replace(/^\/[^/]*/, '') 
+        window.location.href = preferredLang + path;
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>
