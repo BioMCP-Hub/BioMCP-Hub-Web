@@ -1,127 +1,128 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BioMCP-Hub | 生命科学智能协作平台</title>
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <title>BioMCP-Hub | Intelligent Life Science Platform</title>
     <style>
-        .science-gradient {
-            background: linear-gradient(135deg, #1a237e 0%, #004d40 50%, #00695c 100%);
+        /* 基础样式 */
+        :root {
+            --primary: #2B6CB0;  /* 科技蓝 */
+            --secondary: #38A169; /* 生态绿 */
         }
-        .dna-pattern {
-            background-image: url('data:image/svg+xml;utf8,<svg...>'); /* 自定义DNA链背景矢量图 */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* 首屏 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), url('dna-background.jpg');
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 核心价值模块 */
+        .core-aim {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        .aim-card {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        /* 功能展示 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+        .feature-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- 导航栏 -->
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <img src="/logo.svg" class="h-8 w-8" alt="BioMCP">
-                    <span class="ml-2 text-xl font-bold text-gray-800">BioMCP-Hub</span>
-                </div>
-                <a href="#beta" class="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
-                    申请内测
-                </a>
+<body>
+    <nav>
+        <div class="container">
+            <h2>BioMCP-Hub</h2>
+            <div class="nav-links">
+                <a href="#aim">Vision</a>
+                <a href="#features">Features</a>
+                <a href="/docs">Documentation</a>
             </div>
         </div>
     </nav>
 
-    <!-- 首屏展示 -->
-    <header class="science-gradient text-white">
-        <div class="max-w-7xl mx-auto px-4 py-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                让生命科学研究进入智能协作时代
-            </h1>
-            <p class="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                聚合200+生物数据库、50+分析工具与AI模型，通过智能体自动编排研究流程，效率提升10倍
-            </p>
-            <div class="flex justify-center space-x-4">
-                <a href="#demo" class="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-shadow">
-                    观看演示
-                </a>
-                <a href="#docs" class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-colors">
-                    开发文档
-                </a>
-            </div>
-        </div>
-    </header>
+    <section class="hero">
+        <h1>Your Gateway to Intelligent Life Science Research</h1>
+        <p class="lead">Unifying fragmented tools into AI-powered workflows</p>
+        <button class="cta-button">Explore Services →</button>
+    </section>
 
-    <!-- 核心价值模块 -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-            <div class="p-6 border rounded-xl hover:shadow-lg transition-shadow">
-                <div class="text-emerald-600 text-4xl mb-4">🧬</div>
-                <h3 class="text-xl font-bold mb-3">一站式科研工作流</h3>
-                <p class="text-gray-600">
-                    文献检索 → 数据清洗 → 模型预测 → 可视化分析，全流程无缝衔接
-                </p>
-            </div>
-            <div class="p-6 border rounded-xl hover:shadow-lg transition-shadow">
-                <div class="text-emerald-600 text-4xl mb-4">🤖</div>
-                <h3 class="text-xl font-bold mb-3">智能体自动编排</h3>
-                <p class="text-gray-600">
-                    自然语言描述需求，AI自动调用工具链并生成可复现报告
-                </p>
-            </div>
-            <div class="p-6 border rounded-xl hover:shadow-lg transition-shadow">
-                <div class="text-emerald-600 text-4xl mb-4">🌐</div>
-                <h3 class="text-xl font-bold mb-3">开放科研生态</h3>
-                <p class="text-gray-600">
-                    开源协议集成第三方工具，共享500+社区贡献的分析模块
-                </p>
-            </div>
+    <section id="aim" class="core-aim">
+        <div class="aim-card">
+            <h2>Our Mission</h2>
+            <p>BioMCP-Hub aims to <strong>revolutionize life science research</strong> by:</p>
+            <ul>
+                <li>Integrating 100+ biological databases & AI models</li>
+                <li>Automating analysis workflows with intelligent agents</li>
+                <li>Building an open ecosystem for scientific collaboration</li>
+            </ul>
         </div>
     </section>
 
-    <!-- 应用场景示例 -->
-    <section class="py-16 bg-gray-50 dna-pattern">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">典型科研场景</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-emerald-100 p-3 rounded-full mr-4">🔬</div>
-                        <h3 class="text-xl font-semibold">单细胞测序分析</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        输入原始fastq文件 → 自动质控 → 选择分析流程(Seurat/Scanpy) → 交互式可视化 → 导出发表级图表
-                    </p>
-                    <div class="bg-gray-100 p-4 rounded-md text-sm font-mono">
-                        $ biomcp run --input *.fastq --pipeline scrna
-                    </div>
-                </div>
-                <!-- 其他场景卡片... -->
-            </div>
+    <section id="features" class="features">
+        <!-- 功能1: MCP服务市场 -->
+        <div class="feature-card">
+            <img src="service-market.svg" alt="Service Market" class="feature-icon">
+            <h3>MCP Service Hub</h3>
+            <ul>
+                <li>🔍 Unified search across 50M+ research assets</li>
+                <li>⚡ One-click deployment of analysis tools</li>
+                <li>🌐 Community-driven service marketplace</li>
+            </ul>
+        </div>
+
+        <!-- 功能2: 智能分析工作流 -->
+        <div class="feature-card">
+            <img src="workflow-engine.svg" alt="Workflow" class="feature-icon">
+            <h3>Smart Workflow Engine</h3>
+            <ul>
+                <li>🤖 NLP-driven protocol generation</li>
+                <li>🧬 Automatic service orchestration</li>
+                <li>📊 Reproducible analysis pipelines</li>
+            </ul>
         </div>
     </section>
 
-    <!-- 技术信任背书 -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">合作与认证</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-70">
-                <img src="elixir-logo.svg" class="h-12 mx-auto" alt="ELIXIR">
-                <img src="embl-ebi-logo.svg" class="h-12 mx-auto" alt="EMBL-EBI">
-                <img src="iso27001.svg" class="h-12 mx-auto" alt="ISO27001">
-                <img src="ga4gh-logo.svg" class="h-12 mx-auto" alt="GA4GH">
-            </div>
+    <section class="tech-showcase">
+        <h2>Powered By</h2>
+        <div class="tech-stack">
+            <img src="kubernetes-logo.svg" alt="Kubernetes">
+            <img src="langchain-logo.svg" alt="LangChain">
+            <img src="bioformat-logo.svg" alt="BioFormats">
         </div>
     </section>
-
-    <!-- 页脚 -->
-    <footer class="bg-gray-800 text-gray-300 py-12">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="mb-4">遵循FAIR原则构建开放科研基础设施</p>
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="#docs" class="hover:text-white transition-colors">开发者文档</a>
-                <a href="#pricing" class="hover:text-white transition-colors">服务定价</a>
-                <a href="#contact" class="hover:text-white transition-colors">实验室合作</a>
-            </div>
-            <p class="text-sm text-gray-500">© 2024 BioMCP-Hub. 遵循AGPL-3.0开源协议</p>
-        </div>
-    </footer>
 </body>
 </html>
