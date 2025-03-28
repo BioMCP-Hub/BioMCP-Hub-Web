@@ -2,28 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BioMCP-Hub | AI-Driven Life Science Orchestration Platform</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMCP-Hub | AI-Powered Life Science Research Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 增强型样式 */
         :root {
-            --primary: #2563eb;  /* 深科技蓝 */
-            --secondary: #16a34a; /* 生命科学绿 */
-            --accent: #9333ea;   /* 分析流程紫 */
+            --primary: #2563eb;
+            --secondary: #16a34a;
+            --accent: #9333ea;
         }
-        /* 动态渐变背景 */
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* 动态首屏 */
         .hero {
             background: linear-gradient(135deg, 
                 rgba(37,99,235,0.9) 0%, 
                 rgba(22,163,74,0.85) 100%),
-                url('dna-helix-3d.gif');
+                url('https://scienceimage.csiro.au/images/animations/dna-helix-3d-rotation.gif');
             background-size: cover;
             color: white;
             padding: 12rem 2rem 8rem;
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
-        /* 动态分子效果 */
+
         .molecule-animation {
             position: absolute;
             width: 400px;
@@ -33,214 +41,159 @@
             opacity: 0.3;
             animation: rotate 60s linear infinite;
         }
+
         @keyframes rotate { 
             100% { transform: rotate(360deg); } 
         }
 
-        /* 科研案例展示 */
-        .use-cases {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            padding: 4rem 2rem;
-            background: #f8fafc;
-        }
-        .case-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .case-visual {
-            height: 200px;
-            background: #e2e8f0;
-            position: relative;
-        }
-        .case-badge {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            background: var(--accent);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-        }
-
-        /* 技术架构展示 */
-        .architecture {
-            padding: 4rem 2rem;
-            background: linear-gradient(to right, #f8fafc 50%, white 50%);
-        }
-        .arch-diagram {
-            max-width: 1200px;
-            margin: 2rem auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        .arch-node {
+        /* 功能卡片增强 */
+        .feature-card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
             padding: 2rem;
-            border: 2px solid var(--primary);
-            border-radius: 8px;
-            text-align: center;
-            position: relative;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .arch-node:after {
-            content: "➔";
-            position: absolute;
-            right: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--primary);
-        }
-        .arch-node:last-child:after { display: none; }
 
-        /* 动态数据展示 */
-        .live-stats {
-            background: var(--primary);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
-        .stat-item {
-            display: inline-block;
-            margin: 0 3rem;
+
+        /* 技术架构可视化 */
+        .arch-diagram {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
         }
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
+
+        .arch-node {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            position: relative;
+            border: 2px solid var(--primary);
         }
     </style>
 </head>
 <body>
     <nav class="sticky-nav">
-        <!-- 导航栏同上，略 -->
+        <div class="container">
+            <h2><img src="https://thenounproject.com/bioicons/icon/3d-dna-helix/download/?color=%232563eb&width=40" alt="Logo"> BioMCP-Hub</h2>
+            <div class="nav-links">
+                <a href="#features"><i class="fas fa-flask"></i> Features</a>
+                <a href="#cases"><i class="fas fa-microscope"></i> Cases</a>
+                <a href="#docs"><i class="fas fa-book-open"></i> Docs</a>
+            </div>
+        </div>
     </nav>
 
     <section class="hero">
-        <img src="protein-molecule.svg" class="molecule-animation">
+        <img src="https://scienceimage.csiro.au/images/animations/protein-3d-rotation.gif" 
+             class="molecule-animation" 
+             alt="Protein structure">
         <div class="hero-content">
-            <h1>Transform Your Research with Intelligent Automation</h1>
-            <p class="lead">Integrating 150+ biological databases and 50+ AI models into unified workflows</p>
+            <h1>Transform Biomedical Research with AI Orchestration</h1>
             <div class="hero-cta">
-                <button class="cta-button">Start Free Trial</button>
+                <button class="cta-button">
+                    <i class="fas fa-vial"></i> Start Free Trial
+                </button>
                 <a href="#demo" class="video-link">
-                    <i class="fas fa-play-circle"></i> Watch Platform Demo
+                    <i class="fas fa-play-circle"></i> Watch Demo
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 新增：实时数据看板 -->
     <section class="live-stats">
         <div class="stat-item">
-            <div class="stat-number" id="serviceCount">128</div>
-            <div class="stat-label">Available MCP Services</div>
+            <div class="stat-number" id="serviceCount">217</div>
+            <div class="stat-label">Integrated Services</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number" id="analysisRun">1,892,450</div>
-            <div class="stat-label">Analyses Completed</div>
+            <div class="stat-number" id="paperIndexed">35.6M</div>
+            <div class="stat-label">Papers Indexed</div>
         </div>
     </section>
 
-    <!-- 增强型核心功能 -->
     <section id="features" class="features">
         <div class="feature-card">
             <div class="feature-header">
-                <i class="fas fa-dna feature-icon"></i>
-                <h3>Omics Data Orchestration</h3>
+                <img src="https://thenounproject.com/bioicons/icon/genome-sequencing/download/?color=%232563eb&width=80" 
+                     alt="Genomics">
+                <h3>Multi-Omics Analysis</h3>
             </div>
-            <div class="feature-detail">
-                <ul>
-                    <li><strong>Multi-omics Integration:</strong> Unified access to TCGA, GEO, ENCODE, etc.</li>
-                    <li><strong>Smart Normalization:</strong> Auto-convert RNA-Seq/Proteomics data to standard format</li>
-                    <li><strong>Batch Processing:</strong> Kubernetes-powered parallel analysis</li>
-                </ul>
-                <div class="tech-tags">
-                    <span class="tag">Single-cell RNA-Seq</span>
-                    <span class="tag">Metagenomics</span>
-                    <span class="tag">CRISPR Screening</span>
-                </div>
-            </div>
+            <ul>
+                <li>Unified access to TCGA, GEO, Single-cell Atlas</li>
+                <li>Automated data normalization & batch correction</li>
+                <li>Interactive visualization tools</li>
+            </ul>
         </div>
-        
+
         <div class="feature-card">
             <div class="feature-header">
-                <i class="fas fa-robot feature-icon"></i>
-                <h3>AI-Driven Discovery</h3>
+                <img src="https://thenounproject.com/bioicons/icon/ai-brain/download/?color=%239333ea&width=80" 
+                     alt="AI">
+                <h3>AI/ML Pipeline</h3>
             </div>
-            <div class="feature-detail">
-                <ul>
-                    <li><strong>Model Zoo:</strong> Pre-trained models for target discovery/ADMET prediction</li>
-                    <li><strong>Automated ML:</strong> AutoML pipelines for custom dataset</li>
-                    <li><strong>Explainability:</strong> SHAP/LIME integration for model interpretation</li>
-                </ul>
-                <div class="model-showcase">
-                    <img src="alphafold-logo.png" alt="AlphaFold">
-                    <img src="drugbert-logo.png" alt="DrugBERT">
-                </div>
-            </div>
+            <ul>
+                <li>Pre-trained models: AlphaFold, DrugBERT, scGPT</li>
+                <li>AutoML for custom datasets</li>
+                <li>Model interpretation toolkit</li>
+            </ul>
         </div>
     </section>
 
-    <!-- 新增：科研案例 -->
-    <section class="use-cases">
-        <h2 class="section-title">Real-World Impact</h2>
-        <div class="case-card">
-            <div class="case-visual">
-                <div class="case-badge">Cancer Research</div>
-                <img src="tcga-analysis.jpg" alt="TCGA Analysis">
-            </div>
-            <div class="case-content">
-                <h4>Pan-Cancer Biomarker Discovery</h4>
-                <p>"Using BioMCP-Hub, we reduced analysis time from 2 weeks to 8 hours by automating TCGA data processing and integrating our custom survival model."</p>
-                <div class="case-meta">
-                    <img src="user-avatar.jpg" class="user-avatar">
-                    <span>Dr. Zhang, Oncology Lab</span>
-                </div>
-            </div>
-        </div>
-        <!-- 更多案例... -->
-    </section>
-
-    <!-- 新增：技术架构 -->
     <section class="architecture">
-        <h2 class="section-title">Trusted Architecture</h2>
+        <h2>Trusted Infrastructure</h2>
         <div class="arch-diagram">
             <div class="arch-node">
-                <i class="fas fa-database"></i>
-                <h4>Distributed Data Lake</h4>
-                <p>Federated access to 150+ databases with unified API</p>
+                <img src="https://cncf-branding.netlify.app/img/projects/kubernetes/icon/color/kubernetes-icon-color.svg" 
+                     alt="Kubernetes" width="60">
+                <h4>Cloud-Native Architecture</h4>
+                <p>Elastic scaling for large-scale computations</p>
             </div>
             <div class="arch-node">
-                <i class="fas fa-network-wired"></i>
-                <h4>Service Orchestration</h4>
-                <p>Dynamic DAG generation with fault tolerance</p>
-            </div>
-            <div class="arch-node">
-                <i class="fas fa-shield-alt"></i>
-                <h4>HIPAA-Compliant</h4>
-                <p>End-to-end encryption & audit trails</p>
+                <img src="https://raw.githubusercontent.com/langchain-ai/langchain/master/docs/static/img/langchain-logo.svg" 
+                     alt="LangChain" width="120">
+                <h4>AI Orchestration</h4>
+                <p>Dynamic workflow generation with LLMs</p>
             </div>
         </div>
     </section>
-</body>
 
-<script>
-    // 动态数据更新
-    function animateValue(obj, start, end, duration) {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            obj.textContent = Math.floor(progress * (end - start) + start);
-            if (progress < 1) window.requestAnimationFrame(step);
+    <script>
+        // 动态计数器
+        const options = {
+            threshold: 0.5,
+            rootMargin: '0px'
         };
-        window.requestAnimationFrame(step);
-    }
-    animateValue(document.getElementById("serviceCount"), 0, 128, 2000);
-    animateValue(document.getElementById("analysisRun"), 0, 1892450, 2500);
-</script>
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue(document.getElementById("serviceCount"), 0, 217, 2000);
+                    animateValue(document.getElementById("paperIndexed"), 0, 35600000, 2500);
+                }
+            });
+        }, options);
+
+        observer.observe(document.querySelector('.live-stats'));
+
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.textContent = new Intl.NumberFormat().format(
+                    Math.floor(progress * (end - start) + start)
+                );
+                progress < 1 && requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        }
+    </script>
+</body>
 </html>
