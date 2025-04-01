@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 中文版SEO配置 -->
-    <link rel="alternate" hreflang="zh" href="https://biomcp-hub.github.io/zh/" />
-    <link rel="alternate" hreflang="en" href="https://biomcp-hub.github.io/" />
-    <link rel="canonical" href="https://biomcp-hub.github.io/zh/" />
-    
-    <!-- 其他meta标签 -->
-    <meta property="og:title" content="BioMCP-Hub | 生命科学智能体平台">
-    <meta name="description" content="首个整合生物数据库与AI模型的生命科学研究协作平台">
-    <title>BioMCP-Hub | 生命科学智能体平台</title>
+    <title>MCP服务生态 | BioMCP-Hub</title>
+    <meta name="description" content="MCP服务生态，统一的生命科学研究平台，由BioMCP-Hub提供支持">
+    <link rel="alternate" hreflang="en" href="https://biomcp-hub.github.io/mcp-service-ecosystem/" />
+    <link rel="alternate" hreflang="zh" href="https://biomcp-hub.github.io/zh/mcp-service-ecosystem/" />
+    <link rel="canonical" href="https://biomcp-hub.github.io/zh/mcp-service-ecosystem/" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .dna-gradient {
@@ -26,7 +20,7 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- 导航栏 -->
+    <!-- Navigation -->
     <nav class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
@@ -38,8 +32,8 @@
                     <span class="ml-2 text-xl font-bold text-gray-800">BioMCP-Hub</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="/zh/index.html" class="text-gray-600 hover:text-emerald-600">功能特性</a>
-                    <a href="/zh/index.html" class="text-gray-600 hover:text-emerald-600">服务生态</a>
+                    <a href="/zh/features" class="text-gray-600 hover:text-emerald-600">功能特性</a>
+                    <a href="/zh/ecosystem" class="text-gray-600 hover:text-emerald-600">服务生态</a>
                     <a href="/zh/intelligent-agent-client.html" class="text-gray-600 hover:text-emerald-600">智能体客户端</a>
                     <a href="/zh/mcp-service-ecosystem.html" class="text-gray-600 hover:text-emerald-600">MCP服务生态</a>
                     <a href="https://github.com/BioMCP-Hub" class="text-gray-600 hover:text-emerald-600">联系我们</a>
@@ -47,70 +41,27 @@
                 <div class="flex items-center space-x-2">
                     <span class="text-emerald-600">中文</span>
                     <span class="text-gray-400">|</span>
-                    <a href="/" class="text-gray-600 hover:text-emerald-600">English</a>
+                    <a href="/mcp-service-ecosystem.html" class="text-gray-600 hover:text-emerald-600">English</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- 首屏展示 -->
+    <!-- Hero Section -->
     <header class="dna-gradient">
         <div class="max-w-7xl mx-auto px-4 py-20 text-center">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                重新定义生命科学研究范式
+                MCP服务生态
             </h1>
             <p class="text-xl text-white opacity-90 mb-8 max-w-3xl mx-auto">
-                首个面向生命科学领域的智能体协作平台，整合200+生物数据库与AI模型，<br>
-                通过智能体自动编排实验流程，让科研效率提升10倍
+                探索MCP服务生态，一个统一的生命科学研究平台，由BioMCP-Hub提供支持。
             </p>
-            <div class="space-x-4">
-                <a href="#demo" class="bg-white text-emerald-600 px-8 py-3 rounded-full font-semibold 
-                    hover:bg-opacity-90 transition-all">
-                    观看演示
-                </a>
-                <a href="#try" class="border-2 border-white text-white px-8 py-3 rounded-full 
-                    hover:bg-white hover:text-emerald-600 transition-all">
-                    立即体验
-                </a>
-            </div>
         </div>
     </header>
 
-    <!-- 核心目标 Section -->
+    <!-- Features Section -->
     <section class="max-w-7xl mx-auto px-4 py-20">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
-            <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                打破生命科学工具碎片化现状，构建统一的智能服务中台，<br>
-                通过标准化MCP协议连接数据、工具与研究人员
-            </p>
-        </div>
-
-        <!-- 核心功能展示 -->
-        <div id="features" class="grid md:grid-cols-2 gap-12">
-            <!-- 功能1: 智能客户端 -->
-            <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <div class="dna-icon mb-6 text-emerald-600">
-                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                              d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-4">智能体客户端</h3>
-                <p class="text-gray-600 mb-4">
-                    ▸ 自然语言驱动实验设计<br>
-                    ▸ 自动匹配最佳分析流程<br>
-                    ▸ 实时监控资源消耗<br>
-                    ▸ 跨平台协作支持
-                </p>
-                <div class="mt-6">
-                    <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm">
-                        已集成50+核心服务
-                    </span>
-                </div>
-            </div>
-
-            <!-- 功能2: 服务市场 -->
+        <div class="grid md:grid-cols-2 gap-12">
             <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
                 <div class="dna-icon mb-6 text-blue-600">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,23 +69,51 @@
                               d="M4 6h16M4 12h16m-7 6h7"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-gray-800 mb-4">MCP服务生态</h3>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">标准化服务封装协议</h3>
                 <p class="text-gray-600 mb-4">
-                    ▸ 标准化服务封装协议<br>
-                    ▸ 一键发布/订阅服务<br>
-                    ▸ 自动版本管理<br>
-                    ▸ 服务性能排行榜
+                    发现并部署专为生命科学研究设计的标准化服务。
                 </p>
-                <div class="mt-6">
-                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-                        开放开发者SDK
-                    </span>
+            </div>
+            <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="dna-icon mb-6 text-blue-600">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
                 </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">一键服务部署</h3>
+                <p class="text-gray-600 mb-4">
+                    一键部署服务，简化设置过程。
+                </p>
+            </div>
+            <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="dna-icon mb-6 text-blue-600">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">自动化版本控制</h3>
+                <p class="text-gray-600 mb-4">
+                    自动管理服务版本，确保一致性和可靠性。
+                </p>
+            </div>
+            <div class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="dna-icon mb-6 text-blue-600">
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">性能基准测试</h3>
+                <p class="text-gray-600 mb-4">
+                    基准测试服务性能，识别最高效的解决方案。
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white">
         <div class="max-w-7xl mx-auto px-4 py-12">
             <div class="text-center">
@@ -150,4 +129,3 @@
     </footer>
 </body>
 </html>
-
